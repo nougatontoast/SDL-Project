@@ -47,7 +47,7 @@ Debug/Game.cpp.o: Game.cpp Game.h \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL_version.h \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL_locale.h \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL_misc.h \
- InputProcessor.h Command.h RenderingHandler.h Color8.h Color.h
+ InputProcessor.h Command.h RenderingHandler.h Color.h Color8.h
 
 Game.h:
 
@@ -153,6 +153,6 @@ Command.h:
 
 RenderingHandler.h:
 
-Color8.h:
-
 Color.h:
+
+Color8.h:

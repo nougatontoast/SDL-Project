@@ -52,6 +52,7 @@ void Game::RunLoop(void)
 		{
 			command -> Execute();
 		}
+		renderingHandler.DrawFrame();
 	}
 }
 

@@ -13,6 +13,7 @@ int main(int argc, char* argv[])
 	
 	if(game.Init())
 	{
+		std::cout << "Game initialization complete" << std::endl;
 		if(true)
 		{
 			TxtParser_Input txtParser_Input{game.GetInputProcessor()};
@@ -20,9 +21,11 @@ int main(int argc, char* argv[])
 			{
 				exit(1);
 			}
+			std::cout << "Inputs created in input processor." << std::endl;
 		}
 		
 		CommandsKeeper {game};
+		std::cout << "Commands entered into inputs." << std::endl;
 		
 		game.ConfigureInput();
 		game.RunLoop();

@@ -14,12 +14,13 @@ public:
 	
 	bool Init(SDL_Window* window);
 	void DrawFrame(void);
+	void SetRenderDrawColor(std::shared_ptr<Color> color);
 	
 private:
 	SDL_Renderer* renderer;
 	
-	std::unique_ptr <Color> baseColor;
-	std::unique_ptr <Color> tempColor;
+	std::shared_ptr <Color> baseColor;
+	std::shared_ptr <Color> tempColor;
 		
 };
 

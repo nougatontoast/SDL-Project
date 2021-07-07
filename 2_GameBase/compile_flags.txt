@@ -1,4 +1,4 @@
--IC:\Users\clair\Documents\Computer_Science_Notes\CPP\CL_SDL\2_GameBase
+-IC:\Users\clair\Documents\Computer_Science_Notes\CPP\CL_SDL\SDL-Project\2_GameBase
 -IC:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2
 -IC:\Users\clair\Documents\_Libs\_CL\_SDL2_image-2.0.5\x86_64-w64-mingw32\include\SDL2
 -std=c++17
