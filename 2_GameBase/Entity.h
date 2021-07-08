@@ -20,9 +20,9 @@ public:
 private:
 	const std::string name;
 	
-	std::unique_ptr <Transform> transform;
-	std::unique_ptr <SpriteRenderer> spriteRenderer;
-	std::unique_ptr <PhysicsBody2D> physicsBody2D;
+	std::shared_ptr <Transform> transform;
+	std::shared_ptr <SpriteRenderer> spriteRenderer;
+	std::shared_ptr <PhysicsBody2D> physicsBody2D;
 };
 
 #endif // ENTITY_H

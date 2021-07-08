@@ -1,7 +1,11 @@
 #include "Transform.h"
 
-Transform::Transform(Transform::Anchor anchor, float sizeWidth, float sizeHeight, float posX, float posY)
-	:  anchor {anchor}, sizeWidth {sizeWidth}, sizeHeight {sizeHeight}, posX{posX}, posY{posY}
+Transform::Transform(Entity& entity, Transform::Anchor anchor, float sizeWidth, float sizeHeight, float posX, float posY)
+	: entity {entity},
+	anchor {anchor},
+	sizeWidth {sizeWidth},
+	sizeHeight {sizeHeight},
+	posX{posX}, posY{posY}
 {
 	const std::pair <float, float> normalizedPos = NormalizePositionViaAnchor(this->posX, this->posY);
 	this->posX = normalizedPos.first;

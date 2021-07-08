@@ -1,6 +1,7 @@
 #ifndef TRANSFORM_H
 #define TRANSFORM_H
 #include <utility>
+#include "Entity.h"
 
 class Transform
 {
@@ -18,7 +19,7 @@ public:
 		CORNER_BOTTOM_RIGHT
 	};
 	
-	Transform(Transform::Anchor anchor = CENTER, float sizeWidth = 0.0f, float sizeHeight = 0.0f, float posX = 0.0f, float posY = 0.0f);
+	Transform(Entity& entity, Transform::Anchor anchor = CENTER, float sizeWidth = 0.0f, float sizeHeight = 0.0f, float posX = 0.0f, float posY = 0.0f);
 	~Transform();
 	
 	const std::pair<float, float> GetSize(void);
@@ -28,6 +29,7 @@ public:
 	void SetPos(float x, float y);
 	
 private:
+	const Entity& entity;
 	int anchor;
 	
 	float sizeWidth;
