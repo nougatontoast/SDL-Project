@@ -1,7 +1,7 @@
 #include "Transform.h"
 
-Transform::Transform(Entity& entity, Transform::Anchor anchor, float sizeWidth, float sizeHeight, float posX, float posY)
-	: entity {entity},
+Transform::Transform(const std::string entityName, Transform::Anchor anchor, float sizeWidth, float sizeHeight, float posX, float posY)
+	: entityName {entityName},
 	anchor {anchor},
 	sizeWidth {sizeWidth},
 	sizeHeight {sizeHeight},

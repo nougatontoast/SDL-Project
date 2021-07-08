@@ -1,5 +1,5 @@
 Debug/Entity.cpp.o: Entity.cpp Entity.h I_Update.h Transform.h \
- SpriteRenderer.h Color8.h Color.h PhysicsBody2D.h
+ SpriteRenderer.h Color.h Color8.h PhysicsBody2D.h
 
 Entity.h:
 
@@ -9,8 +9,8 @@ Transform.h:
 
 SpriteRenderer.h:
 
-Color8.h:
-
 Color.h:
+
+Color8.h:
 
 PhysicsBody2D.h:
