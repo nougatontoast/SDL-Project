@@ -10,19 +10,14 @@
 class Entity : public I_Update
 {
 public:
-	Entity(std::string name = "UNKNOWN", Transform* transformPtr = NULL, SpriteRenderer* spriteRendererPtr = NULL, PhysicsBody2D* physicsBody2DPtr = NULL);
+	Entity(std::string name = "UNKNOWN");
 	~Entity();
 	
-	virtual void Update(void) override {};
-	
-	const std::string& GetName(void);
+	virtual void Update(void) override {};	
 	
 private:
 	const std::string name;
 	
-	std::shared_ptr <Transform> transform;
-	std::shared_ptr <SpriteRenderer> spriteRenderer;
-	std::shared_ptr <PhysicsBody2D> physicsBody2D;
 };
 
 #endif // ENTITY_H

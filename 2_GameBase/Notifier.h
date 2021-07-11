@@ -11,7 +11,7 @@ public:
 	
 	void AddObserver(Observer* observer);
 	void RemoveObserver(Observer* observer);
-	void Notify(void);
+	void Notify(unsigned short flag = 0);
 	
 private:
 	std::set <Observer*> observers;

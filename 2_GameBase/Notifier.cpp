@@ -22,11 +22,11 @@ void Notifier::RemoveObserver(Observer* observer)
 	}
 }
 
-void Notifier::Notify(void)
+void Notifier::Notify(unsigned short flag)
 {
 	for(auto& observer : observers)
 	{
-		observer -> OnNotify();
+		observer -> OnNotify(flag);
 	}
 }
 

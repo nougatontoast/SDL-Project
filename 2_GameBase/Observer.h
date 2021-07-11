@@ -8,7 +8,7 @@ public:
 	
 	friend bool operator==(const Observer& lhs, const Observer& rhs);
 	
-	virtual void OnNotify(void) {};
+	virtual void OnNotify(unsigned short flag) {};
 };
 
 #endif // OBSERVER_H

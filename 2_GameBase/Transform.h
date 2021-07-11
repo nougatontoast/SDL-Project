@@ -2,10 +2,18 @@
 #define TRANSFORM_H
 #include <utility>
 #include <string>
+#include <iostream>
+#include "Component.h"
 
-class Transform
+class Transform : public Component
 {
 public:
+	enum DataChange
+	{
+		POS_CHANGED,
+		SIZE_CHANGED
+	};
+	
 	enum Anchor
 	{
 		CENTER,
@@ -19,26 +27,28 @@ public:
 		CORNER_BOTTOM_RIGHT
 	};
 	
-	Transform(std::string entityName, Transform::Anchor anchor = CENTER, float sizeWidth = 0.0f, float sizeHeight = 0.0f, float posX = 0.0f, float posY = 0.0f);
+	static const Component::Type type;
+	
+	Transform(const std::string& entityName, Transform::Anchor anchor = CENTER, int sizeWidth = 0, int sizeHeight = 0, int posX = 0, int = 0);
 	~Transform();
 	
-	const std::pair<float, float> GetSize(void);
-	const std::pair<float, float> GetPos(void);
+	const std::pair<int, int> GetSize(void);
+	const std::pair<int, int> GetPos(void);
 	
-	void SetSize(float w, float h);
-	void SetPos(float x, float y);
+	void SetSize(int w, int h);
+	void SetPos(int x, int y);
 	
 private:
-	const std::string entityName;
+	const std::string& entityName;
 	int anchor;
 	
-	float sizeWidth;
-	float sizeHeight;
+	int sizeWidth;
+	int sizeHeight;
 	
-	float posX;
-	float posY;
-	
-	const std::pair <float,float> NormalizePositionViaAnchor(float rawX, float rawY);
+	int posX;
+	int posY;
+		
+	const std::pair <int,int> NormalizePositionViaAnchor(int rawX, int rawY);
 };
 
 #endif // TRANSFORM_H

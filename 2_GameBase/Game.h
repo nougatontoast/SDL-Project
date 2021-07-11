@@ -17,6 +17,8 @@ public:
 	bool& GetQuitTrigger(void);
 	
 	InputProcessor& GetInputProcessor(void);
+	RenderingHandler& GetRenderingHandler(void);
+	
 	void ConfigureInput(void);
 	bool SetInputCommand(std::shared_ptr <Command> command);
 	

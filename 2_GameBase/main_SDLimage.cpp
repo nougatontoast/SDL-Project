@@ -6,6 +6,7 @@
 #include "Game.h"
 #include "CommandsKeeper.h"
 #include "TxtParser_Input.h"
+#include "Entity.h"
 
 int main(int argc, char* argv[])
 {
@@ -25,9 +26,9 @@ int main(int argc, char* argv[])
 		}
 		
 		CommandsKeeper {game};
-		std::cout << "Commands entered into inputs." << std::endl;
-		
+		std::cout << "Commands matched with inputs.\n" << std::endl;
 		game.ConfigureInput();
+		
 		game.RunLoop();
 	}
 	

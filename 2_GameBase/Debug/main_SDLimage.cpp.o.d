@@ -52,7 +52,9 @@ Debug/main_SDLimage.cpp.o: main_SDLimage.cpp \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/begin_code.h \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/close_code.h \
  Game.h InputProcessor.h Command.h RenderingHandler.h Color.h Color8.h \
- CommandsKeeper.h CommandQuit.h TxtParser_Input.h TxtParser.h
+ SpriteRenderer.h Component.h CommandsKeeper.h CommandQuit.h \
+ TxtParser_Input.h TxtParser.h Entity.h I_Update.h Transform.h \
+ PhysicsBody2D.h
 
 C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL.h:
 
@@ -170,6 +172,10 @@ Color.h:
 
 Color8.h:
 
+SpriteRenderer.h:
+
+Component.h:
+
 CommandsKeeper.h:
 
 CommandQuit.h:
@@ -177,3 +183,11 @@ CommandQuit.h:
 TxtParser_Input.h:
 
 TxtParser.h:
+
+Entity.h:
+
+I_Update.h:
+
+Transform.h:
+
+PhysicsBody2D.h:

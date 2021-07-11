@@ -56,6 +56,11 @@ void Game::RunLoop(void)
 	}
 }
 
+RenderingHandler& Game::GetRenderingHandler(void)
+{
+	return renderingHandler;
+}
+
 bool& Game::GetQuitTrigger(void)
 {
 	return triggerQuit;

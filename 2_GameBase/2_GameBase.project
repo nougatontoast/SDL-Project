@@ -7,7 +7,7 @@
     <Extensions>
       <![CDATA[*.cpp;*.c;*.h;*.hpp;*.xrc;*.wxcp;*.fbp]]>
     </Extensions>
-    <Topleveldir>/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/2_GameBase</Topleveldir>
+    <Topleveldir>/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/SDL-Project/2_GameBase</Topleveldir>
   </Reconciliation>
   <Description/>
   <Dependencies/>
@@ -113,12 +113,17 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <VirtualDirectory Name="Update">
+      <File Name="I_Update.h"/>
+    </VirtualDirectory>
     <VirtualDirectory Name="Entity">
+      <File Name="Component.cpp"/>
+      <File Name="Component.h"/>
       <VirtualDirectory Name="Components">
+        <File Name="SpriteRenderer.cpp"/>
+        <File Name="SpriteRenderer.h"/>
         <File Name="PhysicsBody2D.cpp"/>
         <File Name="PhysicsBody2D.h"/>
-        <File Name="I_Update.cpp"/>
-        <File Name="I_Update.h"/>
         <File Name="Transform.cpp"/>
         <File Name="Transform.h"/>
       </VirtualDirectory>
@@ -144,10 +149,7 @@
       <File Name="Command.h"/>
     </VirtualDirectory>
     <VirtualDirectory Name="Observer ">
-      <VirtualDirectory Name="Observers">
-        <File Name="Observer_Quit.cpp"/>
-        <File Name="Observer_Quit.h"/>
-      </VirtualDirectory>
+      <VirtualDirectory Name="Observers"/>
       <VirtualDirectory Name="Base Classes">
         <File Name="Notifier.h"/>
         <File Name="Notifier.cpp"/>
@@ -155,9 +157,7 @@
         <File Name="Observer.cpp"/>
       </VirtualDirectory>
     </VirtualDirectory>
-    <VirtualDirectory Name="Rendering">
-      <File Name="SpriteRenderer.cpp"/>
-      <File Name="SpriteRenderer.h"/>
+    <VirtualDirectory Name="Rendering Handler">
       <File Name="RenderingHandler.cpp"/>
       <File Name="RenderingHandler.h"/>
       <VirtualDirectory Name="Color">

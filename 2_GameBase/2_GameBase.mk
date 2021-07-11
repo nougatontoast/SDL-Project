@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=clair
-Date                   :=08/07/2021
+Date                   :=11/07/2021
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :="C:/Program Files/mingw-w64/mingw64/bin/g++.exe"
 SharedObjectLinkerName :="C:/Program Files/mingw-w64/mingw64/bin/g++.exe" -shared -fPIC
@@ -62,8 +62,8 @@ AS       := "C:/Program Files/mingw-w64/mingw64/bin/as.exe"
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/Game.cpp$(ObjectSuffix) $(IntermediateDirectory)/SpriteRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputProcessor.cpp$(ObjectSuffix) $(IntermediateDirectory)/PhysicsBody2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/Entity.cpp$(ObjectSuffix) $(IntermediateDirectory)/CommandQuit.cpp$(ObjectSuffix) $(IntermediateDirectory)/Observer_Quit.cpp$(ObjectSuffix) $(IntermediateDirectory)/Color.cpp$(ObjectSuffix) $(IntermediateDirectory)/main_SDLimage.cpp$(ObjectSuffix) $(IntermediateDirectory)/TxtParser.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/RenderingHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/CommandsKeeper.cpp$(ObjectSuffix) $(IntermediateDirectory)/Transform.cpp$(ObjectSuffix) $(IntermediateDirectory)/I_Update.cpp$(ObjectSuffix) $(IntermediateDirectory)/TxtParser_Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Command.cpp$(ObjectSuffix) $(IntermediateDirectory)/Notifier.cpp$(ObjectSuffix) $(IntermediateDirectory)/Observer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Color8.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Game.cpp$(ObjectSuffix) $(IntermediateDirectory)/SpriteRenderer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Component.cpp$(ObjectSuffix) $(IntermediateDirectory)/InputProcessor.cpp$(ObjectSuffix) $(IntermediateDirectory)/PhysicsBody2D.cpp$(ObjectSuffix) $(IntermediateDirectory)/Entity.cpp$(ObjectSuffix) $(IntermediateDirectory)/CommandQuit.cpp$(ObjectSuffix) $(IntermediateDirectory)/Color.cpp$(ObjectSuffix) $(IntermediateDirectory)/main_SDLimage.cpp$(ObjectSuffix) $(IntermediateDirectory)/TxtParser.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/RenderingHandler.cpp$(ObjectSuffix) $(IntermediateDirectory)/CommandsKeeper.cpp$(ObjectSuffix) $(IntermediateDirectory)/Transform.cpp$(ObjectSuffix) $(IntermediateDirectory)/TxtParser_Input.cpp$(ObjectSuffix) $(IntermediateDirectory)/Command.cpp$(ObjectSuffix) $(IntermediateDirectory)/Notifier.cpp$(ObjectSuffix) $(IntermediateDirectory)/Observer.cpp$(ObjectSuffix) $(IntermediateDirectory)/Color8.cpp$(ObjectSuffix) 
 
 
 
@@ -106,6 +106,12 @@ $(IntermediateDirectory)/SpriteRenderer.cpp$(ObjectSuffix): SpriteRenderer.cpp
 $(IntermediateDirectory)/SpriteRenderer.cpp$(PreprocessSuffix): SpriteRenderer.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SpriteRenderer.cpp$(PreprocessSuffix) SpriteRenderer.cpp
 
+$(IntermediateDirectory)/Component.cpp$(ObjectSuffix): Component.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Component.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Component.cpp$(DependSuffix) -MM Component.cpp
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/SDL-Project/2_GameBase/Component.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Component.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Component.cpp$(PreprocessSuffix): Component.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Component.cpp$(PreprocessSuffix) Component.cpp
+
 $(IntermediateDirectory)/InputProcessor.cpp$(ObjectSuffix): InputProcessor.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/InputProcessor.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/InputProcessor.cpp$(DependSuffix) -MM InputProcessor.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/SDL-Project/2_GameBase/InputProcessor.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/InputProcessor.cpp$(ObjectSuffix) $(IncludePath)
@@ -129,12 +135,6 @@ $(IntermediateDirectory)/CommandQuit.cpp$(ObjectSuffix): CommandQuit.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/SDL-Project/2_GameBase/CommandQuit.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/CommandQuit.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/CommandQuit.cpp$(PreprocessSuffix): CommandQuit.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/CommandQuit.cpp$(PreprocessSuffix) CommandQuit.cpp
-
-$(IntermediateDirectory)/Observer_Quit.cpp$(ObjectSuffix): Observer_Quit.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Observer_Quit.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Observer_Quit.cpp$(DependSuffix) -MM Observer_Quit.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/SDL-Project/2_GameBase/Observer_Quit.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Observer_Quit.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/Observer_Quit.cpp$(PreprocessSuffix): Observer_Quit.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Observer_Quit.cpp$(PreprocessSuffix) Observer_Quit.cpp
 
 $(IntermediateDirectory)/Color.cpp$(ObjectSuffix): Color.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Color.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Color.cpp$(DependSuffix) -MM Color.cpp
@@ -171,12 +171,6 @@ $(IntermediateDirectory)/Transform.cpp$(ObjectSuffix): Transform.cpp
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/SDL-Project/2_GameBase/Transform.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Transform.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/Transform.cpp$(PreprocessSuffix): Transform.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Transform.cpp$(PreprocessSuffix) Transform.cpp
-
-$(IntermediateDirectory)/I_Update.cpp$(ObjectSuffix): I_Update.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/I_Update.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/I_Update.cpp$(DependSuffix) -MM I_Update.cpp
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/clair/Documents/Computer_Science_Notes/CPP/CL_SDL/SDL-Project/2_GameBase/I_Update.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/I_Update.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/I_Update.cpp$(PreprocessSuffix): I_Update.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/I_Update.cpp$(PreprocessSuffix) I_Update.cpp
 
 $(IntermediateDirectory)/TxtParser_Input.cpp$(ObjectSuffix): TxtParser_Input.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/TxtParser_Input.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/TxtParser_Input.cpp$(DependSuffix) -MM TxtParser_Input.cpp

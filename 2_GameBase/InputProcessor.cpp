@@ -14,7 +14,7 @@ void InputProcessor::ConfigureInput(void)
 	std::cout << "Configuring input!" << std::endl;
 	for(auto& [key, input] : inputs)
 	{
-		std::cout << "Enter input for " << input -> name << std::endl;
+		std::cout << "\tEnter input for " << input -> name << std::endl;
 		bool validInputSelected {false};
 		while(!validInputSelected)
 		{
@@ -28,6 +28,7 @@ void InputProcessor::ConfigureInput(void)
 			}
 		}
 	}
+	std::cout << "End input configuration." << std::endl;
 }
 
 std::shared_ptr <Command> InputProcessor::ProcessInput(void)

@@ -47,7 +47,7 @@ Debug/RenderingHandler.cpp.o: RenderingHandler.cpp RenderingHandler.h \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL_version.h \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL_locale.h \
  C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL_misc.h \
- Color.h Color8.h
+ Color.h Color8.h SpriteRenderer.h Component.h
 
 RenderingHandler.h:
 
@@ -150,3 +150,7 @@ C:\Users\clair\Documents\_Libs\_CL\x86_64-w64-mingw32\include\SDL2/SDL_misc.h:
 Color.h:
 
 Color8.h:
+
+SpriteRenderer.h:
+
+Component.h:
